@@ -10,14 +10,13 @@ void FighterCtrl::update() {
 		if (ih->isKeyDown(SDLK_UP)) {
 			Vector2D newVel;
 			newVel = tr_->getVel() + Vector2D(0, -1).rotate(tr_->getRot()) * THRUST;
-
-			tr_->setVel(newVel);
+			if(newVel.magnitude() < maxVel) tr_->setVel(newVel);
 		}
 		else if (ih->isKeyDown(SDLK_LEFT)) {
-			tr_->setRot(tr_->getRot() - 5);
+			tr_->setRot(tr_->getRot() - ANGLE);
 		}
 		else if (ih->isKeyDown(SDLK_RIGHT)) {
-			tr_->setRot(tr_->getRot() + 5);
+			tr_->setRot(tr_->getRot() + ANGLE);
 		}
 	}
 }

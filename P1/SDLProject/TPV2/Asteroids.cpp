@@ -31,9 +31,9 @@ void Asteroids::initGame() {
 	Transform* shipTR = ship->addComponent<Transform>();
 	shipTR->setPos(100, 100);
 	shipTR->setWH(207/5, 250/5);
+	ship->addComponent<FighterCtrl>();
 	ship->addComponent<FighterViewer>();
 	ship->addComponent<FighterMotion>();
-	ship->addComponent<FighterCtrl>();
 	ship->addComponent<Health>();
 	Entity* gameManager = entityManager_->addEntity();
 	/*gameManager->addComponent<ScoreManager>(1);

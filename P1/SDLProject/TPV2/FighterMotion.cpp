@@ -1,7 +1,7 @@
 #include "FighterMotion.h"
 
 void FighterMotion::update() {
-	if (tr_->getPos().getX() + tr_->getW() / 2 > game_->getWindowWidth()) {		//Si se pasa por la dcha
+	if (tr_->getPos().getX() + (tr_->getW() / 2) > game_->getWindowWidth()) {		    //Si se pasa por la dcha
 		tr_->setPosX(game_->getWindowWidth() - tr_->getW() / 2);
 		tr_->setVelX(tr_->getVel().getX() * (-drag_));
 	}

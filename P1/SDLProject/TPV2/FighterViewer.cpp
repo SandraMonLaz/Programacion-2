@@ -10,5 +10,5 @@ void FighterViewer::draw() {
 	clip.x = 47; clip.y = 90; clip.h = 250; clip.w = 207;
 	SDL_Rect dest;
 	dest.x = tr_->getPos().getX(); dest.y = tr_->getPos().getY(); dest.h = tr_->getH(); dest.w = tr_->getW();
-	texture_->render(game_->getRenderer(),dest,tr_->getRot(),&clip);
+	texture_->render(dest,tr_->getRot(),clip);
 }

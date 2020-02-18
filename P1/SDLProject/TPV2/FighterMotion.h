@@ -9,7 +9,7 @@ private:
 	Transform* tr_;
 	double drag_;
 public:
-	FighterMotion() : Component(ecs::FighterMotion), drag_(0.6){}
+	FighterMotion() : Component(ecs::FighterMotion), drag_(0.45){}
 	~FighterMotion() {};
 	void init() override;
 	void update() override;
