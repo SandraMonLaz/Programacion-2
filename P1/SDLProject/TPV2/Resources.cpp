@@ -17,26 +17,29 @@ vector<Resources::ImageInfo> Resources::images_ {
 		{ SpaceShips, "resources/images/spaceships.png" }, //
 		{ Airplanes, "resources/images/airplanes.png" }, //
 		{ Star, "resources/images/star.png" }, //
-		{ Heart, "resources/images/heart.png" } //
+		{ Heart, "resources/images/heart.png" }, //
+		{ Asteroid, "resources/images/asteroid.png" }, //
+		{ Bullet, "resources/images/whiterect.png" } //
 };
 
 vector<Resources::TextMsgInfo> Resources::messages_ {
 //
-		{ HelloWorld, "Hello World", { COLOR(0xaaffffff) }, ARIAL16 }, //
 		{ PressAnyKey, "Press Any Key to Start", { COLOR(0xaaffbbff) }, ARIAL24 }, //
-		{ GameOver, "Game Over", { COLOR(0xffffbbff) }, ARIAL24 } //
+		{ GameOverLost, "Game Over! You lost!", { COLOR(0xffffbbff) }, ARIAL24 }, //
+		{ GameOverWon, "Game Over! You won!", { COLOR(0xffffbbff) }, ARIAL24 } //
 };
 
 vector<Resources::MusicInfo> Resources::musics_ {
 //
 		{ Beat, "resources/sound/beat.wav" }, //
 		{ Cheer, "resources/sound/cheer.wav" }, //
-		{ Boooo, "resources/sound/boooo.wav" } //
+		{ Boooo, "resources/sound/boooo.wav" }, //
+		{ ImperialMarch, "resources/sound/imperial_march.wav" } //
 };
 
 vector<Resources::SoundInfo> Resources::sounds_ {
 //
-		{ Wall_Hit, "resources/sound/wall_hit.wav" }, //
-		{ Paddle_Hit, "resources/sound/paddle_hit.wav" } //
+		{ Gunshot, "resources/sound/GunShot.wav" }, //
+		{ Explosion, "resources/sound/explosion.wav" } //
 };
 

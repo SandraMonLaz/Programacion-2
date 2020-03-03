@@ -26,9 +26,13 @@
     <ClCompile Include="Asteroid.cpp" />
     <ClCompile Include="AsteroidPool.cpp" />
     <ClCompile Include="Asteroids.cpp" />
+    <ClCompile Include="AsteroidsMotion.cpp" />
+    <ClCompile Include="AsteroidsViewer.cpp" />
     <ClCompile Include="AudioManager.cpp" />
-    <ClCompile Include="BallMoveBehaviour.cpp" />
     <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="BulletPool.cpp" />
+    <ClCompile Include="BulletsMotion.cpp" />
+    <ClCompile Include="BulletsViewer.cpp" />
     <ClCompile Include="Collisions.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="Entity.cpp" />
@@ -49,7 +53,6 @@
     <ClCompile Include="PaddleKBCtrl.cpp" />
     <ClCompile Include="PaddleMouseCtrl.cpp" />
     <ClCompile Include="PaddleMoveBehaviour.cpp" />
-    <ClCompile Include="PingPong.cpp" />
     <ClCompile Include="RandomNumberGenerator.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Resources.cpp" />
@@ -71,9 +74,13 @@
     <ClInclude Include="Asteroid.h" />
     <ClInclude Include="AsteroidPool.h" />
     <ClInclude Include="Asteroids.h" />
+    <ClInclude Include="AsteroidsMotion.h" />
+    <ClInclude Include="AsteroidsViewer.h" />
     <ClInclude Include="AudioManager.h" />
-    <ClInclude Include="BallMoveBehaviour.h" />
     <ClInclude Include="Bullet.h" />
+    <ClInclude Include="BulletPool.h" />
+    <ClInclude Include="BulletsMotion.h" />
+    <ClInclude Include="BulletsViewer.h" />
     <ClInclude Include="checkML.h" />
     <ClInclude Include="Collisions.h" />
     <ClInclude Include="Component.h" />
@@ -95,7 +102,6 @@
     <ClInclude Include="PaddleKBCtrl.h" />
     <ClInclude Include="PaddleMouseCtrl.h" />
     <ClInclude Include="PaddleMoveBehaviour.h" />
-    <ClInclude Include="PingPong.h" />
     <ClInclude Include="RandomNumberGenerator.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Resources.h" />

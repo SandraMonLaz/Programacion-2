@@ -1,52 +1,23 @@
 #pragma once
-
 #include "Component.h"
-
-class ScoreManager: public Component {
+class ScoreManager : public Component
+{
 public:
-	ScoreManager();
-	ScoreManager(int rounds);
-	virtual ~ScoreManager();
-
-	int getLeftScore() const {
-		return leftScore_;
-	}
-
-	void setLeftScore(int leftScore) {
-		leftScore_ = leftScore;
-	}
-
-	int getRightScore() const {
-		return rightScore_;
-	}
-
-	void setRightScore(int rightScore) {
-		rightScore_ = rightScore;
-	}
-
-	int getRounds() const {
-		return rounds_;
-	}
-
-	void setRounds(int rounds) {
-		rounds_ = rounds;
-	}
-
-	bool isRunning() const {
-		return running_;
-	}
-
-	void setRunning(bool running) {
-		running_ = running;
-	}
-
-	bool isGameOver() {
-		return leftScore_ == rounds_ || rightScore_ == rounds_;
-	}
+	enum States{
+		parado, noParado, terminado, noTerminado
+	};
+	ScoreManager() : Component(ecs::ScoreManager) {};
+	~ScoreManager() {};
+	void addPoints(int p) { points_ += p; }
+	void setState(States state) { actualState_ = state; }
+	int getState() { return actualState_; }
+	int getPoints() { return points_; }
+	inline void resetPoints() { points_ = 0; };
 
 private:
-	bool running_;
-	int leftScore_;
-	int rightScore_;
-	int rounds_;
+	int points_ = 0;
+	States actualState_ = parado;
+	
+
 };
+

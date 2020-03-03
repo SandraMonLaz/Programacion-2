@@ -12,11 +12,13 @@ private:
 public:
 	AsteroidPool() : Component(ecs::AsteroidPool) , op_([](Asteroid* o) { return o->inUse(); }), numAsteroids_(0) {}
 	~AsteroidPool() {};
+	void init() override {};
 
 	void generateAsteroids(int n);
 	void disableAll();
 	void onCollision(Asteroid* a, Bullet* b);
 	inline int getNumOfAsteroid() { return numAsteroids_; }
 	inline vector<Asteroid*> getPool() { return op_.getPool(); }
+	void calculatePos(int i,double& x, double& y);
 };
 

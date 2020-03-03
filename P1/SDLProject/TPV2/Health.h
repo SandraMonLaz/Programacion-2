@@ -13,5 +13,6 @@ public:
 	void draw() override;
 	void resetLives();
 	void loseLive();
+	int getHp() { return lives_; }
 };
 

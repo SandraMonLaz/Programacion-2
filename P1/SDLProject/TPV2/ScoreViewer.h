@@ -1,14 +1,17 @@
 #pragma once
-
 #include "Component.h"
 #include "ScoreManager.h"
+#include "Entity.h"
 
-class ScoreViewer: public Component {
+class ScoreViewer :	public Component
+{
+private:
+	ScoreManager* score_ = nullptr;
+	Texture* texture_ = nullptr;
 public:
-	ScoreViewer();
-	virtual ~ScoreViewer();
+	ScoreViewer() :Component(ecs::ScoreViewer) {};
+	~ScoreViewer() {};
 	void init() override;
 	void draw() override;
-private:
-	ScoreManager *scoreManager_;
 };
+

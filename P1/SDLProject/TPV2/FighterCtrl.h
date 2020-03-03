@@ -2,6 +2,7 @@
 #include "Component.h"
 #include "Transform.h"
 #include "Entity.h"
+#include "BulletPool.h"
 
 class FighterCtrl :	public Component
 {

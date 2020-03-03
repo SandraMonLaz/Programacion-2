@@ -1,57 +1,56 @@
 #include "GameLogic.h"
-#include "Collisions.h"
-#include "Resources.h"
-#include "Entity.h"
 
-GameLogic::GameLogic(Transform *ballTR, Transform *leftPaddleTR,
-		Transform *rightPaddleTR) :
-		Component(ecs::GameLogic), //
-		ballTR_(ballTR), //
-		leftPaddleTR_(leftPaddleTR), //
-		rightPaddleTR_(rightPaddleTR), //
-		scoreManager_(nullptr) //
+void GameLogic::init()
 {
+	score_ = GETCMP1_(ScoreManager);
 }
-
-GameLogic::~GameLogic() {
-}
-
-void GameLogic::init() {
-	// scoreManager_ = GETCMP2(ecs::ScoreManager,ScoreManager);
-	scoreManager_ = GETCMP1_(ScoreManager);
-}
-
-void GameLogic::update() {
-	// check for collision of ball with paddles
-	if (Collisions::collides(ballTR_->getPos(), ballTR_->getW(),
-			ballTR_->getH(), leftPaddleTR_->getPos(), leftPaddleTR_->getW(),
-			leftPaddleTR_->getH())
-			|| Collisions::collides(ballTR_->getPos(), ballTR_->getW(),
-					ballTR_->getH(), rightPaddleTR_->getPos(),
-					rightPaddleTR_->getW(), rightPaddleTR_->getH())) {
-		Vector2D v = ballTR_->getVel();
-		v.setX(-v.getX());
-		ballTR_->setVel(v * 1.2);
-		game_->getAudioMngr()->playChannel(Resources::Paddle_Hit, 0);
-	}
-
-	// check if the back exit from sides
-	if (ballTR_->getPos().getX() <= 0) {
-		scoreManager_->setRightScore(scoreManager_->getRightScore() + 1);
-		scoreManager_->setRunning(false);
-		ballTR_->setVel(Vector2D(0, 0));
-		ballTR_->setPos(
-				Vector2D(game_->getWindowWidth() / 2 - 6,
-						game_->getWindowHeight() / 2 - 6));
-
-	} else if (ballTR_->getPos().getX() + ballTR_->getW()
-			>= game_->getWindowWidth()) {
-		scoreManager_->setLeftScore(scoreManager_->getLeftScore() + 1);
-		scoreManager_->setRunning(false);
-		ballTR_->setPos(
-				Vector2D(game_->getWindowWidth() / 2 - 6,
-						game_->getWindowHeight() / 2 - 6));
-		ballTR_->setVel(Vector2D(0, 0));
+void GameLogic::update()
+{
+	if (score_->getState() == score_->noParado) {
+		for (auto o : asteroidsPool_->getPool()) {
+			if (o->inUse()) {
+				if (Collisions::collidesWithRotation(transform_->getPos(), transform_->getW(), transform_->getH(), transform_->getRot(),
+					o->getPos(), o->getW(), o->getH(), o->getRot())) {
+					//Desactivamos objetos
+					asteroidsPool_->disableAll();
+					bulletPool->disableAll();
+					//Reseteamos caza y restamos vida
+					transform_->setPos(game_->getWindowWidth() / 2, game_->getWindowHeight() / 2);
+					transform_->setVel(Vector2D(0, 0));
+					transform_->setRot(0);
+					health_->loseLive();
+					//Cambiamos de estado
+					if (health_->getHp() > 0) score_->setState(score_->parado);
+					else {
+						GETCMP1_(GameCtrl)->resetGame();
+						score_->setState(score_->noTerminado);
+					}
+				}
+				collisionWithBullet(o);
+			}
+		}
 	}
 }
-
+void GameLogic::collisionWithBullet(Asteroid* a) {
+	for (auto b : bulletPool->getPool()) {
+		if (b->inUse()) {
+			if (Collisions::collidesWithRotation(a->getPos(), a->getW(), a->getH(), a->getRot(),
+				b->getPos(), b->getW(), b->getH(), b->getRot())) {
+				bulletPool->onCollision(b, a);
+				asteroidsPool_->onCollision(a, b);
+				score_->addPoints(1);
+				game_->getAudioMngr()->playChannel(Resources::Explosion, 0, 0);
+				if (asteroidsPool_->getNumOfAsteroid() == 0) {
+					//Desactivamos objetos
+					bulletPool->disableAll();
+					//Reseteamos caza y restamos vida
+					transform_->setPos(game_->getWindowWidth() / 2, game_->getWindowHeight() / 2);
+					transform_->setVel(Vector2D(0, 0));
+					transform_->setRot(0);
+					health_->resetLives();
+					score_->setState(score_->terminado);
+				}
+			}
+		}
+	}
+}
