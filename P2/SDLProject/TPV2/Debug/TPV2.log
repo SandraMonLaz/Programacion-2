@@ -1,9 +1,0 @@
-﻿  GameCtrlSystem.cpp
-  PacMan.cpp
-D:\GitHub\Programacion-2\P2\SDLProject\TPV2\PacManSystem.h(49,9): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-D:\GitHub\Programacion-2\P2\SDLProject\TPV2\PacManSystem.h(50,9): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-  main.cpp
-D:\GitHub\Programacion-2\P2\SDLProject\TPV2\PacManSystem.h(49,9): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-D:\GitHub\Programacion-2\P2\SDLProject\TPV2\PacManSystem.h(50,9): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-  Generando código...
-  TPV2.vcxproj -> D:\GitHub\Programacion-2\P2\SDLProject\bin\TPV2Debug.exe
