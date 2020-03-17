@@ -25,6 +25,7 @@
   <ItemGroup>
     <ClCompile Include="AsteroidLifetime.cpp" />
     <ClCompile Include="AsteroidPool.cpp" />
+    <ClCompile Include="AsteroidSystem.cpp" />
     <ClCompile Include="AudioManager.cpp" />
     <ClCompile Include="BulletPool.cpp" />
     <ClCompile Include="Collisions.cpp" />
@@ -66,6 +67,7 @@
   <ItemGroup>
     <ClInclude Include="AsteroidLifetime.h" />
     <ClInclude Include="AsteroidPool.h" />
+    <ClInclude Include="AsteroidSystem.h" />
     <ClInclude Include="AudioManager.h" />
     <ClInclude Include="BulletPool.h" />
     <ClInclude Include="Collisions.h" />

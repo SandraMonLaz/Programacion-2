@@ -14,5 +14,8 @@ public:
 
 	void init() override;
 	void update() override;
+
+	void onFighterDead();
+	void onAsteroidExtenction();
 };
 
