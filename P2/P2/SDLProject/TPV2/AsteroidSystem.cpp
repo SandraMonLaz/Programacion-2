@@ -78,6 +78,7 @@ void AsteroidSystem::update()
 			}
 		}
 	}
+	
 }
 
 
