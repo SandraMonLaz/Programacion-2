@@ -3,23 +3,38 @@
 #include "Collisions.h"
 #include "System.h"
 #include "Manager.h"
-#include "StarsSystem.h"
 #include "Transform.h"
-
+#include "GameState.h"
+#include "BulletSystem.h"
+#include "AsteroidSystem.h"
+#include "FighterSystem.h"
 class CollisionSystem: public System {
 public:
-	CollisionSystem() :
-		System(ecs::_sys_Collisions) {
-	}
+	CollisionSystem() :	System(ecs::_sys_Collisions) {}
 
-	void update() {
-		auto ptr = mngr_->getHandler(ecs::_hdlr_PacMan)->getComponent<Transform>(ecs::Transform);
-		for( auto& e : mngr_->getGroupEntities(ecs::_grp_Star)) {
-			auto etr = e->getComponent<Transform>(ecs::Transform);
-			if ( Collisions::collides(ptr->position_, ptr->width_, ptr->height_, etr->position_, etr->width_, etr->height_)) {
-				mngr_->getSystem<StarsSystem>(ecs::_sys_Stars)->onCollision(e);
+	// - si el juego está parado no hacer nada.
+	// - comprobar colisiones usando el esquema abajo (nota las instrucciones break
+	// y continue, piensa porque son necesarias).
+	void update() override {
+		if (mngr_->getGroupEntities(ecs::_hdlr_GameState)[0]->getComponent<GameState>(ecs::GameState)->currentState_ == GameState::noParado) {
+			for (auto &a : mngr_->getGroupEntities(ecs::_grp_Asteroid)) {
+				Entity* fighter = mngr_->getGroupEntities(ecs::_hdlr_Fighter)[0];
+				Transform* trA = a->getComponent<Transform>(ecs::Transform);
+				Transform* trF = fighter->getComponent<Transform>(ecs::Transform);
+				if (Collisions::collidesWithRotation(trA->position_, trA->width_, trA->height_, trA->rotation_, trF->position_, trF->width_, trF->height_, trF->rotation_)) {
+					mngr_->getSystem<FighterSystem>(ecs::_sys_Fighter)->onCollisionWithAsteroid(fighter);
+					break;
+				}
+				for (auto& b : mngr_->getGroupEntities(ecs::_grp_Bullet)) {
+					Transform* trB = b->getComponent<Transform>(ecs::Transform);
+					if (!b->isActive()) continue;
+					if (!a->isActive()) break;
+					if (Collisions::collidesWithRotation(trA->position_, trA->width_, trA->height_, trA->rotation_, trB->position_, trB->width_, trB->height_, trB->rotation_)) {
+						mngr_->getSystem<BulletSystem>(ecs::_sys_Bullets)->onCollisionWithAsteroid(b, a);
+						mngr_->getSystem<AsteroidSystem>(ecs::_sys_Asteroids)->onCollisionWithBullet(a, b);
+					}
+				}
 			}
 		}
 	}
 };
-
