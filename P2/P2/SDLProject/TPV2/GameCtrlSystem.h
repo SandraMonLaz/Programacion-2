@@ -11,6 +11,7 @@ class GameCtrlSystem: public System {
 public:
 
 	GameCtrlSystem() : System(ecs::_sys_GameCtrl) {}
+	~GameCtrlSystem() {}
 
 	void init() override;
 	void update() override;

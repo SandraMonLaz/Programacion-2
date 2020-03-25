@@ -11,14 +11,15 @@
 class CollisionSystem: public System {
 public:
 	CollisionSystem() :	System(ecs::_sys_Collisions) {}
+	~CollisionSystem() {}
 
 	// - si el juego está parado no hacer nada.
 	// - comprobar colisiones usando el esquema abajo (nota las instrucciones break
 	// y continue, piensa porque son necesarias).
 	void update() override {
-		if (mngr_->getGroupEntities(ecs::_hdlr_GameState)[0]->getComponent<GameState>(ecs::GameState)->currentState_ == GameState::noParado) {
+		if (mngr_->getHandler(ecs::_hdlr_GameState)->getComponent<GameState>(ecs::GameState)->currentState_ == GameState::noParado) {
 			for (auto &a : mngr_->getGroupEntities(ecs::_grp_Asteroid)) {
-				Entity* fighter = mngr_->getGroupEntities(ecs::_hdlr_Fighter)[0];
+				Entity* fighter = mngr_->getHandler(ecs::_hdlr_Fighter);
 				Transform* trA = a->getComponent<Transform>(ecs::Transform);
 				Transform* trF = fighter->getComponent<Transform>(ecs::Transform);
 				if (Collisions::collidesWithRotation(trA->position_, trA->width_, trA->height_, trA->rotation_, trF->position_, trF->width_, trF->height_, trF->rotation_)) {

@@ -5,8 +5,8 @@
 
 void FighterGunSystem::update()
 {
-	Transform* tr_ = mngr_->getGroupEntities(ecs::_hdlr_Fighter)[0]->getComponent<Transform>(ecs::Transform);
-	if (mngr_->getGroupEntities(ecs::_hdlr_GameState)[0]->getComponent<GameState>(ecs::GameState)->currentState_ == GameState::noParado) {
+	Transform* tr_ = mngr_->getHandler(ecs::_hdlr_Fighter)->getComponent<Transform>(ecs::Transform);
+	if (mngr_->getHandler(ecs::_hdlr_GameState)->getComponent<GameState>(ecs::GameState)->currentState_ == GameState::noParado) {
 		InputHandler* ih = InputHandler::instance();
 		if (ih->keyDownEvent()) {
 			if (time_ < game_->getTime() && ih->isKeyDown(SDLK_SPACE)) {

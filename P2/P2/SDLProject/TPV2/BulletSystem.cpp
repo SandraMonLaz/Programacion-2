@@ -21,7 +21,7 @@ void BulletSystem::onCollisionWithAsteroid(Entity* b, Entity* a)
 
 void BulletSystem::update()
 {
-	if (mngr_->getGroupEntities(ecs::_hdlr_GameState)[0]->getComponent<GameState>(ecs::GameState)->currentState_ == GameState::noParado) {
+	if (mngr_->getHandler(ecs::_hdlr_GameState)->getComponent<GameState>(ecs::GameState)->currentState_ == GameState::noParado) {
 		for (auto& o : mngr_->getGroupEntities(ecs::_grp_Bullet)) {
 			if (o->isActive()) {
 				Transform* t = o->getComponent<Transform>(ecs::Transform);

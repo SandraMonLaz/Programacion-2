@@ -64,16 +64,7 @@
     <ClCompile Include="OFFacotry.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PacMan.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PacManSystem.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="RandomNumberGenerator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="RenderSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Resources.cpp">
@@ -98,9 +89,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SRandBasedGenerator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="StarsSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="System.cpp">
@@ -148,6 +136,12 @@
     <ClCompile Include="FighterGunSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RenderGunSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Asteroids.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AudioManager.h">
@@ -189,9 +183,6 @@
     <ClInclude Include="jute.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LifeTime.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Manager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -204,16 +195,7 @@
     <ClInclude Include="OFFacotry.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PacMan.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PacManSystem.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="RandomNumberGenerator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="RenderSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Resources.h">
@@ -241,9 +223,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SRandBasedGenerator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="StarsSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="System.h">
@@ -286,6 +265,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FighterGunSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderGunSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Asteroids.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

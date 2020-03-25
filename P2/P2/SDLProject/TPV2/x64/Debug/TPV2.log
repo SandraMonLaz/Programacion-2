@@ -1,11 +1,16 @@
 ﻿  AsteroidLifetime.cpp
   AsteroidPool.cpp
+  Asteroids.cpp
+  AsteroidSystem.cpp
   AudioManager.cpp
   BulletPool.cpp
+  BulletSystem.cpp
   Collisions.cpp
   CollisionSystem.cpp
   DefFactory.cpp
   Entity.cpp
+  FighterGunSystem.cpp
+  FighterSystem.cpp
   Font.cpp
   FontsManager.cpp
   GameCtrlSystem.cpp
@@ -13,23 +18,39 @@
   Health.cpp
   InputHandler.cpp
   jute.cpp
+  Generando código...
+  Compilando...
   main.cpp
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\PacManSystem.h(49,9): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\PacManSystem.h(50,9): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
   Manager.cpp
   ObjectFactory.cpp
   ObjectPool.cpp
   OFFacotry.cpp
-  Generando código...
-  Compilando...
-  PacMan.cpp
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\PacManSystem.h(49,9): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\PacManSystem.h(50,9): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-  PacManSystem.cpp
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\PacManSystem.h(49,9): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\PacManSystem.h(50,9): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
   RandomNumberGenerator.cpp
-  RenderSystem.cpp
+  RenderGunSystem.cpp
+D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(9,36): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
+D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(9,36): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(9,57): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
+D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(9,57): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(9,62): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
+D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(9,62): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(9,73): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
+D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(9,73): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(14,36): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
+D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(14,36): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(14,57): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
+D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(14,57): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(14,62): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
+D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(14,62): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(14,73): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
+D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(14,73): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(21,35): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
+D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(21,35): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(21,56): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
+D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(21,56): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(21,61): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
+D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(21,61): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(21,72): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
+D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(21,72): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
   Resources.cpp
   Score.cpp
   SDLAudioManager.cpp
@@ -43,29 +64,33 @@ D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\SDLFontsManager.cpp(50,13): warni
   Singleton.cpp
   SRandBasedGenerator.cpp
 D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\SRandBasedGenerator.cpp(11,8): warning C4244: 'inicializando': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-  StarsSystem.cpp
   System.cpp
   Texture.cpp
   TexturesManager.cpp
   Transform.cpp
+  Generando código...
+  Compilando...
   Vector2D.cpp
   Generando código...
      Creando biblioteca D:\GitHub\Programacion-2\P2\P2\SDLProject\bin\TPV2Debug.lib y objeto D:\GitHub\Programacion-2\P2\P2\SDLProject\bin\TPV2Debug.exp
+Asteroids.obj : error LNK2019: símbolo externo SDL_GetScancodeFromKey sin resolver al que se hace referencia en la función "public: bool __cdecl InputHandler::isKeyDown(int)" (?isKeyDown@InputHandler@@QEAA_NH@Z)
+FighterGunSystem.obj : error LNK2001: símbolo externo SDL_GetScancodeFromKey sin resolver
+FighterSystem.obj : error LNK2001: símbolo externo SDL_GetScancodeFromKey sin resolver
+GameCtrlSystem.obj : error LNK2001: símbolo externo SDL_GetScancodeFromKey sin resolver
+Asteroids.obj : error LNK2019: símbolo externo SDL_SetRenderDrawColor sin resolver al que se hace referencia en la función "public: void __cdecl Asteroids::start(void)" (?start@Asteroids@@QEAAXXZ)
+SDLGame.obj : error LNK2001: símbolo externo SDL_SetRenderDrawColor sin resolver
+Asteroids.obj : error LNK2019: símbolo externo SDL_RenderClear sin resolver al que se hace referencia en la función "public: void __cdecl Asteroids::start(void)" (?start@Asteroids@@QEAAXXZ)
+SDLGame.obj : error LNK2001: símbolo externo SDL_RenderClear sin resolver
+Asteroids.obj : error LNK2019: símbolo externo SDL_RenderPresent sin resolver al que se hace referencia en la función "public: void __cdecl Asteroids::start(void)" (?start@Asteroids@@QEAAXXZ)
+SDLGame.obj : error LNK2001: símbolo externo SDL_RenderPresent sin resolver
+Asteroids.obj : error LNK2019: símbolo externo SDL_GetTicks sin resolver al que se hace referencia en la función "public: unsigned int __cdecl SDLGame::getTime(void)" (?getTime@SDLGame@@QEAAIXZ)
+FighterGunSystem.obj : error LNK2001: símbolo externo SDL_GetTicks sin resolver
+Asteroids.obj : error LNK2019: símbolo externo SDL_Delay sin resolver al que se hace referencia en la función "public: void __cdecl Asteroids::start(void)" (?start@Asteroids@@QEAAXXZ)
 Font.obj : error LNK2019: símbolo externo TTF_OpenFont sin resolver al que se hace referencia en la función "public: bool __cdecl Font::load(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,int)" (?load@Font@@QEAA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@H@Z)
 Font.obj : error LNK2019: símbolo externo TTF_RenderText_Solid sin resolver al que se hace referencia en la función "public: struct SDL_Surface * __cdecl Font::renderText(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,struct SDL_Color)const " (?renderText@Font@@QEBAPEAUSDL_Surface@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@USDL_Color@@@Z)
 Font.obj : error LNK2019: símbolo externo TTF_CloseFont sin resolver al que se hace referencia en la función "public: void __cdecl Font::close(void)" (?close@Font@@QEAAXXZ)
-GameCtrlSystem.obj : error LNK2019: símbolo externo SDL_GetScancodeFromKey sin resolver al que se hace referencia en la función "public: bool __cdecl InputHandler::isKeyDown(int)" (?isKeyDown@InputHandler@@QEAA_NH@Z)
-PacMan.obj : error LNK2001: símbolo externo SDL_GetScancodeFromKey sin resolver
 InputHandler.obj : error LNK2019: símbolo externo SDL_GetKeyboardState sin resolver al que se hace referencia en la función "private: __cdecl InputHandler::InputHandler(void)" (??0InputHandler@@AEAA@XZ)
 InputHandler.obj : error LNK2019: símbolo externo SDL_PollEvent sin resolver al que se hace referencia en la función "public: void __cdecl InputHandler::update(void)" (?update@InputHandler@@QEAAXXZ)
-PacMan.obj : error LNK2019: símbolo externo SDL_SetRenderDrawColor sin resolver al que se hace referencia en la función "public: void __cdecl PacMan::start(void)" (?start@PacMan@@QEAAXXZ)
-SDLGame.obj : error LNK2001: símbolo externo SDL_SetRenderDrawColor sin resolver
-PacMan.obj : error LNK2019: símbolo externo SDL_RenderClear sin resolver al que se hace referencia en la función "public: void __cdecl PacMan::start(void)" (?start@PacMan@@QEAAXXZ)
-SDLGame.obj : error LNK2001: símbolo externo SDL_RenderClear sin resolver
-PacMan.obj : error LNK2019: símbolo externo SDL_RenderPresent sin resolver al que se hace referencia en la función "public: void __cdecl PacMan::start(void)" (?start@PacMan@@QEAAXXZ)
-SDLGame.obj : error LNK2001: símbolo externo SDL_RenderPresent sin resolver
-PacMan.obj : error LNK2019: símbolo externo SDL_GetTicks sin resolver al que se hace referencia en la función "public: unsigned int __cdecl SDLGame::getTime(void)" (?getTime@SDLGame@@QEAAIXZ)
-PacMan.obj : error LNK2019: símbolo externo SDL_Delay sin resolver al que se hace referencia en la función "public: void __cdecl PacMan::start(void)" (?start@PacMan@@QEAAXXZ)
 SDLAudioManager.obj : error LNK2019: símbolo externo SDL_RWFromFile sin resolver al que se hace referencia en la función "public: virtual bool __cdecl SDLAudioManager::loadSound(int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?loadSound@SDLAudioManager@@UEAA_NHAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
 SDLAudioManager.obj : error LNK2019: símbolo externo Mix_Init sin resolver al que se hace referencia en la función "public: virtual bool __cdecl SDLAudioManager::init(void)" (?init@SDLAudioManager@@UEAA_NXZ)
 SDLAudioManager.obj : error LNK2019: símbolo externo Mix_Quit sin resolver al que se hace referencia en la función "public: virtual __cdecl SDLAudioManager::~SDLAudioManager(void)" (??1SDLAudioManager@@UEAA@XZ)

@@ -10,6 +10,7 @@ class FighterSystem : public System
 {
 public:
 	FighterSystem() : System(ecs::_sys_Fighter) {};
+	~FighterSystem() {};
 	// Pone el caza en el centro con velocidad 0 y rotación 0. 
 	void onCollisionWithAsteroid(Entity* a);
 	// Crea la entidad del caza, añade sus componentes (Transform, Health, etc.)

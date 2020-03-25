@@ -59,7 +59,7 @@ void AsteroidSystem::onCollisionWithBullet(Entity* a, Entity* b)
 
 void AsteroidSystem::update()
 {
-	if (mngr_->getGroupEntities(ecs::_hdlr_GameState)[0]->getComponent<GameState>(ecs::GameState)->currentState_ == GameState::noParado) {
+	if (mngr_->getHandler(ecs::_hdlr_GameState)->getComponent<GameState>(ecs::GameState)->currentState_ == GameState::noParado) {
 		for (auto& a : mngr_->getGroupEntities(ecs::_grp_Asteroid)) {
 			if (a->isActive()) {
 				Transform* tr = a->getComponent<Transform>(ecs::Transform);

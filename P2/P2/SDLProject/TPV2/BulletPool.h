@@ -46,7 +46,7 @@ private:
 		pool_(n) {
 		for (Entity* e : pool_.getPool()) {
 			e->addComponent<Transform>();
-			e->addComponent<ImageComponent>(SDLGame::instance()->getTextureMngr()->getTexture(Resources::Star));
+			e->addComponent<ImageComponent>(SDLGame::instance()->getTextureMngr()->getTexture(Resources::Bullet));
 		}
 	}
 

@@ -16,14 +16,14 @@ void FighterSystem::init()
 	f->addComponent<Transform>(Vector2D(game_->getWindowWidth()/2,game_->getWindowHeight()/2),Vector2D(0,0), 207 / 5, 250 / 5,0);
 	f->addComponent<ImageComponent>(game_->getTextureMngr()->getTexture(Resources::Airplanes));
 
-	f->addToGroup(ecs::_hdlr_Fighter);
+	mngr_->setHandler(ecs::_hdlr_Fighter, f);
 	f->setActive(true);
 }
 
 void FighterSystem::update()
 {
-	Transform* tr_ = mngr_->getGroupEntities(ecs::_hdlr_Fighter)[0]->getComponent<Transform>(ecs::Transform);
-	if (mngr_->getGroupEntities(ecs::_hdlr_GameState)[0]->getComponent<GameState>(ecs::GameState)->currentState_ == GameState::noParado) {
+	Transform* tr_ = mngr_->getHandler(ecs::_hdlr_Fighter)->getComponent<Transform>(ecs::Transform);
+	if (mngr_->getHandler(ecs::_hdlr_GameState)->getComponent<GameState>(ecs::GameState)->currentState_ == GameState::noParado) {
 		InputHandler* ih = InputHandler::instance();
 		if (ih->keyDownEvent()) {
 			if (ih->isKeyDown(SDLK_UP)) {

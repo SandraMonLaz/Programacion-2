@@ -6,6 +6,7 @@ class AsteroidSystem : public System
 {
 public:
 	AsteroidSystem() : System(ecs::_sys_Asteroids), numOfAsteroids_(0) {}
+	~AsteroidSystem() {}
 	void addAsteroids(int n);
 	void onCollisionWithBullet(Entity* a, Entity* b);
 	void update() override;

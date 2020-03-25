@@ -9,6 +9,9 @@ vector<Resources::FontInfo> Resources::fonts_ {
 
 vector<Resources::ImageInfo> Resources::images_ {
 //
+		{ Heart, "resources/images/heart.png" },//
+		{ Bullet, "resources/images/whiterect.png" },//
+		{ Asteroid, "resources/images/asteroid.png" },//
 		{ Blank, "resources/images/blank.png" }, //
 		{ TennisBall, "resources/images/tennis_ball.png" }, //
 		{ KeyBoardIcon, "resources/images/keyboard.png" }, //
@@ -17,14 +20,15 @@ vector<Resources::ImageInfo> Resources::images_ {
 		{ SpaceShips, "resources/images/spaceships.png" }, //
 		{ Airplanes, "resources/images/airplanes.png" }, //
 		{ Star, "resources/images/star.png" }, //
-		{ PacMan, "resources/images/pacman.png" } //
 };
 
 vector<Resources::TextMsgInfo> Resources::messages_ {
 //
 		{ HelloWorld, "Hello World", { COLOR(0xaaffffff) }, ARIAL16 }, //
-		{ PressAnyKey, "Press Any Key to Start", { COLOR(0xaaffbbff) }, ARIAL24 }, //
-		{ GameOver, "Game Over", { COLOR(0xffffbbff) }, ARIAL24 } //
+		{ PressAnyKey, "Press Enter to Start", { COLOR(0xaaffbbff) }, ARIAL24 }, //
+		{ GameOver, "Game Over", { COLOR(0xffffbbff) }, ARIAL24 }, //
+		{ GameOverWon, "Game Over, you Won", { COLOR(0xffffbbff) }, ARIAL24 }, //
+		{ GameOverLost, "Game Over, you Lost", { COLOR(0xffffbbff) }, ARIAL24 } //
 };
 
 vector<Resources::MusicInfo> Resources::musics_ {

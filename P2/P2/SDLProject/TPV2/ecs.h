@@ -23,7 +23,6 @@ enum CmpId : CmpIdType {
 };
 
 enum GrpId : GrpIdType {
-	_grp_Star,
 	_grp_Asteroid,
 	_grp_Bullet,
 	//
@@ -33,7 +32,6 @@ enum GrpId : GrpIdType {
 };
 
 enum HdlrId : HdlrIdType {
-	_hdlr_PacMan,
 	_hdlr_GameState,
 	_hdlr_Fighter,
 	//
