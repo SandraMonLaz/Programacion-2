@@ -27,43 +27,42 @@
   OFFacotry.cpp
   RandomNumberGenerator.cpp
   RenderGunSystem.cpp
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(9,36): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(9,36): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(9,57): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(9,57): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(9,62): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(9,62): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(9,73): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(9,73): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(14,36): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(14,36): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(14,57): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(14,57): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(14,62): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(14,62): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(14,73): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(14,73): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(21,35): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(21,35): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(21,56): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(21,56): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(21,61): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(21,61): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(21,72): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(21,72): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(9,36): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(9,36): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(9,57): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(9,57): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(9,62): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(9,62): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(9,73): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(9,73): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(14,36): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(14,36): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(14,57): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(14,57): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(14,62): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(14,62): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(14,73): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(14,73): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(21,35): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(21,35): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(21,56): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(21,56): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(21,61): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(21,61): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(21,72): warning C4838: la conversión de 'double' en 'int' requiere una conversión de restricción
   Resources.cpp
   Score.cpp
   SDLAudioManager.cpp
   SDLFontsManager.cpp
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\SDLFontsManager.cpp(38,19): warning C4267: 'argumento': conversión de 'size_t' a 'const int'; posible pérdida de datos
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\SDLFontsManager.cpp(47,26): warning C4267: 'argumento': conversión de 'size_t' a 'const int'; posible pérdida de datos
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\SDLFontsManager.cpp(50,13): warning C4267: 'argumento': conversión de 'size_t' a 'const int'; posible pérdida de datos
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\RenderGunSystem.cpp(21,72): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\SDLFontsManager.cpp(38,19): warning C4267: 'argumento': conversión de 'size_t' a 'const int'; posible pérdida de datos
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\SDLFontsManager.cpp(47,26): warning C4267: 'argumento': conversión de 'size_t' a 'const int'; posible pérdida de datos
   SDLGame.cpp
   SDLTexturesManager.cpp
   sdl_macros.cpp
   Singleton.cpp
   SRandBasedGenerator.cpp
-D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\SRandBasedGenerator.cpp(11,8): warning C4244: 'inicializando': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\SDLFontsManager.cpp(50,13): warning C4267: 'argumento': conversión de 'size_t' a 'const int'; posible pérdida de datos
   System.cpp
   Texture.cpp
   TexturesManager.cpp
@@ -72,7 +71,8 @@ D:\GitHub\Programacion-2\P2\P2\SDLProject\TPV2\SRandBasedGenerator.cpp(11,8): wa
   Compilando...
   Vector2D.cpp
   Generando código...
-     Creando biblioteca D:\GitHub\Programacion-2\P2\P2\SDLProject\bin\TPV2Debug.lib y objeto D:\GitHub\Programacion-2\P2\P2\SDLProject\bin\TPV2Debug.exp
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\TPV2\SRandBasedGenerator.cpp(11,8): warning C4244: 'inicializando': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+     Creando biblioteca F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\bin\TPV2Debug.lib y objeto F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\bin\TPV2Debug.exp
 Asteroids.obj : error LNK2019: símbolo externo SDL_GetScancodeFromKey sin resolver al que se hace referencia en la función "public: bool __cdecl InputHandler::isKeyDown(int)" (?isKeyDown@InputHandler@@QEAA_NH@Z)
 FighterGunSystem.obj : error LNK2001: símbolo externo SDL_GetScancodeFromKey sin resolver
 FighterSystem.obj : error LNK2001: símbolo externo SDL_GetScancodeFromKey sin resolver
@@ -128,10 +128,10 @@ Texture.obj : error LNK2019: símbolo externo SDL_RenderCopyEx sin resolver al q
 Texture.obj : error LNK2019: símbolo externo SDL_DestroyTexture sin resolver al que se hace referencia en la función "public: void __cdecl Texture::close(void)" (?close@Texture@@QEAAXXZ)
 Texture.obj : error LNK2019: símbolo externo IMG_Load sin resolver al que se hace referencia en la función "public: bool __cdecl Texture::loadFromImg(struct SDL_Renderer *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?loadFromImg@Texture@@QEAA_NPEAUSDL_Renderer@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
 MSVCRTD.lib(exe_main.obj) : error LNK2019: símbolo externo main sin resolver al que se hace referencia en la función "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
-D:\GitHub\Programacion-2\P2\P2\SDLProject\SDL2-2.0.7\lib\x86\SDL2.lib : warning LNK4272: el tipo de máquina de biblioteca 'x86' está en conflicto con el tipo de máquina de destino 'x64'
-D:\GitHub\Programacion-2\P2\P2\SDLProject\SDL2-2.0.7\lib\x86\SDL2main.lib : warning LNK4272: el tipo de máquina de biblioteca 'x86' está en conflicto con el tipo de máquina de destino 'x64'
-D:\GitHub\Programacion-2\P2\P2\SDLProject\SDL2_image-2.0.1\lib\x86\SDL2_image.lib : warning LNK4272: el tipo de máquina de biblioteca 'x86' está en conflicto con el tipo de máquina de destino 'x64'
-D:\GitHub\Programacion-2\P2\P2\SDLProject\SDL2_ttf-2.0.14\lib\x86\SDL2_ttf.lib : warning LNK4272: el tipo de máquina de biblioteca 'x86' está en conflicto con el tipo de máquina de destino 'x64'
-D:\GitHub\Programacion-2\P2\P2\SDLProject\SDL2_mixer-2.0.2\lib\x86\SDL2_mixer.lib : warning LNK4272: el tipo de máquina de biblioteca 'x86' está en conflicto con el tipo de máquina de destino 'x64'
-D:\GitHub\Programacion-2\P2\P2\SDLProject\SDL2_net-2.0.1\lib\x86\SDL2_net.lib : warning LNK4272: el tipo de máquina de biblioteca 'x86' está en conflicto con el tipo de máquina de destino 'x64'
-D:\GitHub\Programacion-2\P2\P2\SDLProject\bin\TPV2Debug.exe : fatal error LNK1120: 48 externos sin resolver
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\SDL2-2.0.7\lib\x86\SDL2.lib : warning LNK4272: el tipo de máquina de biblioteca 'x86' está en conflicto con el tipo de máquina de destino 'x64'
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\SDL2-2.0.7\lib\x86\SDL2main.lib : warning LNK4272: el tipo de máquina de biblioteca 'x86' está en conflicto con el tipo de máquina de destino 'x64'
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\SDL2_image-2.0.1\lib\x86\SDL2_image.lib : warning LNK4272: el tipo de máquina de biblioteca 'x86' está en conflicto con el tipo de máquina de destino 'x64'
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\SDL2_ttf-2.0.14\lib\x86\SDL2_ttf.lib : warning LNK4272: el tipo de máquina de biblioteca 'x86' está en conflicto con el tipo de máquina de destino 'x64'
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\SDL2_mixer-2.0.2\lib\x86\SDL2_mixer.lib : warning LNK4272: el tipo de máquina de biblioteca 'x86' está en conflicto con el tipo de máquina de destino 'x64'
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\SDL2_net-2.0.1\lib\x86\SDL2_net.lib : warning LNK4272: el tipo de máquina de biblioteca 'x86' está en conflicto con el tipo de máquina de destino 'x64'
+F:\Desarrollo de Videojuegos\2 CURSO\TPV\TPV2\Programacion-2\P1\SDLProject\P2\P2\SDLProject\bin\TPV2Debug.exe : fatal error LNK1120: 48 externos sin resolver

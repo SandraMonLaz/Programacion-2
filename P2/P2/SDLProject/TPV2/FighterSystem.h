@@ -21,5 +21,6 @@ private:
 	const double THRUST = 0.5;
 	const double ANGLE = 10.0;
 	double maxVel = 5.5;
+	double drag_ = 0.45;
 };
 

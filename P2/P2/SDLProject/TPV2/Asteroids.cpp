@@ -35,10 +35,10 @@ void Asteroids::start()
         fighterSystem->update();
         fighterGunSystem->update();
         asteroidsSystem->update();
-        renderGunSystem->update();
         bulletSystem->update();
         collisionSystem->update();
         gameCtrlSystem->update();
+        renderGunSystem->update();
 
 
         SDL_RenderPresent(game->getRenderer());

@@ -23,12 +23,12 @@ void GameCtrlSystem::update() {
 				mngr_->getHandler(ecs::_hdlr_Fighter)->getComponent<Health>(ecs::Health)->health_ = 3;
 				e->getComponent<Score>(ecs::Score)->points_ = 0;
 			}
-			mngr_->getSystem<AsteroidSystem>(ecs::_sys_Asteroids)->addAsteroids(10);
+			mngr_->getSystem<AsteroidSystem>(ecs::_sys_Asteroids)->addAsteroids(5);
 			e->getComponent<GameState>(ecs::GameState)->currentState_ = GameState::noParado;
 	}
 }
 
-void GameCtrlSystem::onFighterDead()
+void GameCtrlSystem::onFighterDead(GameState::State state)
 {
 	for (auto a : mngr_->getGroupEntities(ecs::_grp_Asteroid)) {
 		a->setActive(false);
@@ -38,9 +38,9 @@ void GameCtrlSystem::onFighterDead()
 		a->setActive(false);
 	}
 
-	Entity* e = mngr_->getGroupEntities(ecs::_hdlr_GameState)[0];
+	Entity* e = mngr_->getHandler(ecs::_hdlr_GameState);
 
-	e->getComponent<GameState>(ecs::GameState)->currentState_ = GameState::noTerminado;
+	e->getComponent<GameState>(ecs::GameState)->currentState_ = state;
 }
 
 void GameCtrlSystem::onAsteroidExtenction()
@@ -53,7 +53,7 @@ void GameCtrlSystem::onAsteroidExtenction()
 		a->setActive(false);
 	}
 
-	Entity* e = mngr_->getGroupEntities(ecs::_hdlr_GameState)[0];
+	Entity* e = mngr_->getHandler(ecs::_hdlr_GameState);
 
 	e->getComponent<GameState>(ecs::GameState)->currentState_ = GameState::terminado;
 }

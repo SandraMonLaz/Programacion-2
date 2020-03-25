@@ -29,6 +29,7 @@ public:
 			e->setActive(true);
 			Transform* tr = e->getComponent<Transform>(ecs::Transform);
 			tr->position_.set(pos);
+			tr->velocity_.set(vel);
 			tr->width_ = width;
 			tr->height_ = height;
 			e->getComponent<AsteroidLifetime>(ecs::AsteroidLifetime)->gen_ = generations;

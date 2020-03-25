@@ -18,16 +18,18 @@ public:
 	// y continue, piensa porque son necesarias).
 	void update() override {
 		if (mngr_->getHandler(ecs::_hdlr_GameState)->getComponent<GameState>(ecs::GameState)->currentState_ == GameState::noParado) {
-			for (auto &a : mngr_->getGroupEntities(ecs::_grp_Asteroid)) {
+			for (auto &a : mngr_->getGroupEntities(ecs::_grp_Asteroid)) {	//Para cada asteroide
 				Entity* fighter = mngr_->getHandler(ecs::_hdlr_Fighter);
 				Transform* trA = a->getComponent<Transform>(ecs::Transform);
 				Transform* trF = fighter->getComponent<Transform>(ecs::Transform);
+				//Miramos si colisiona con el player
 				if (Collisions::collidesWithRotation(trA->position_, trA->width_, trA->height_, trA->rotation_, trF->position_, trF->width_, trF->height_, trF->rotation_)) {
 					mngr_->getSystem<FighterSystem>(ecs::_sys_Fighter)->onCollisionWithAsteroid(fighter);
 					break;
 				}
+				//Miramos si colisiona con alguna de las balas
 				for (auto& b : mngr_->getGroupEntities(ecs::_grp_Bullet)) {
-					Transform* trB = b->getComponent<Transform>(ecs::Transform);
+					Transform* trB = b->getComponent<Transform>(ecs::Transform); 
 					if (!b->isActive()) continue;
 					if (!a->isActive()) break;
 					if (Collisions::collidesWithRotation(trA->position_, trA->width_, trA->height_, trA->rotation_, trB->position_, trB->width_, trB->height_, trB->rotation_)) {

@@ -8,9 +8,9 @@
 void BulletSystem::shoot(Vector2D pos, Vector2D vel, double width, double height)
 {
 	Entity* e = mngr_->addEntity<BulletPool>(pos, vel, width, height);
-	if (mngr_ != nullptr) {
+	if (e != nullptr) {
 		e->setActive(true);
-		mngr_->addToGroup(ecs::_grp_Bullet, e);
+		e->addToGroup(ecs::_grp_Bullet);
 	}
 }
 

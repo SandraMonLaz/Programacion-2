@@ -27,6 +27,7 @@ public:
 		if (e != nullptr) {
 			e->setActive(true);
 			Transform* tr = e->getComponent<Transform>(ecs::Transform);
+			tr->velocity_.set(vel);
 			tr->position_.set(pos);
 			tr->width_ = w;
 			tr->height_ = h;

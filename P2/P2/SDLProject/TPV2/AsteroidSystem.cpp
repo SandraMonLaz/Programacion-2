@@ -2,6 +2,7 @@
 #include "AsteroidPool.h"
 #include "Manager.h"
 #include "GameState.h"
+#include "GameCtrlSystem.h"
 
 void AsteroidSystem::calculatePos(int i, double& x, double& y)
 {
@@ -30,7 +31,7 @@ void AsteroidSystem::addAsteroids(int n)
 
 		if (e != nullptr) {
 			e->setActive(true);
-			mngr_->addToGroup(ecs::_grp_Asteroid, e);
+			e->addToGroup(ecs::_grp_Asteroid);
 			numOfAsteroids_++;
 		}
 	}
@@ -40,21 +41,26 @@ void AsteroidSystem::onCollisionWithBullet(Entity* a, Entity* b)
 {
 	a->setActive(false);
 	numOfAsteroids_--;
+	cout << numOfAsteroids_ << endl;
+	mngr_->getHandler(ecs::_hdlr_GameState)->getComponent<Score>(ecs::Score)->addPoints();
 	if (a->getComponent<AsteroidLifetime>(ecs::AsteroidLifetime)->gen_ > 0) {
 		for (int i = 0; i < 2; ++i) {
 			Vector2D v = a->getComponent<Transform>(ecs::Transform)->velocity_.rotate(i * 45);
 			Vector2D p;
-			p.setX(a->getComponent<Transform>(ecs::Transform)->velocity_.getX() + v.normalize().getX());
-			p.setY(a->getComponent<Transform>(ecs::Transform)->velocity_.getY() + v.normalize().getY());
+			p.setX(a->getComponent<Transform>(ecs::Transform)->position_.getX() + v.normalize().getX());
+			p.setY(a->getComponent<Transform>(ecs::Transform)->position_.getY() + v.normalize().getY());
 			double wh = 20 + 3 * (a->getComponent<AsteroidLifetime>(ecs::AsteroidLifetime)->gen_ - 1);
 
-			Entity* e = mngr_->addEntity<AsteroidPool>(p, v, wh, wh, a->getComponent<AsteroidLifetime>(ecs::AsteroidLifetime)->gen_);
+			Entity* e = mngr_->addEntity<AsteroidPool>(p, v, wh, wh, (a->getComponent<AsteroidLifetime>(ecs::AsteroidLifetime)->gen_)-1);
 			if (e != nullptr) {
-				mngr_->addToGroup(ecs::_grp_Asteroid, e);
+				e->setActive(true);
+				e->addToGroup(ecs::_grp_Asteroid);
 				numOfAsteroids_++;
 			}
 		}
 	}
+	if (numOfAsteroids_ <= 0) mngr_->getSystem<GameCtrlSystem>(ecs::_sys_GameCtrl)->onAsteroidExtenction();
+
 }
 
 void AsteroidSystem::update()
