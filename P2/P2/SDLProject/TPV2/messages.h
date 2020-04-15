@@ -10,6 +10,7 @@ namespace msg {
 		FIGHTER_COLLISION,
 		SHOOT_MSG,
 		ADD_ASTEROID_MSG,
+		ASTEROID_EXTENTION,
 		//
 		last_MsgId
 	};
@@ -38,5 +39,8 @@ namespace msg {
 	struct AddAsteroidMsg : Message {
 		AddAsteroidMsg(int n) : Message(ADD_ASTEROID_MSG), n_(n) {}
 		int n_;
+	};
+	struct AsteroidExtentionMsg : Message {
+		AsteroidExtentionMsg() : Message(ASTEROID_EXTENTION) {}
 	};
 }

@@ -8,7 +8,8 @@ Asteroids::Asteroids():
         renderGunSystem(nullptr),
         bulletSystem(nullptr),
         collisionSystem(nullptr),
-        gameCtrlSystem(nullptr) {
+        gameCtrlSystem(nullptr),
+		soundSystem(nullptr){
     initGame();
 }
 
@@ -39,6 +40,7 @@ void Asteroids::start()
         collisionSystem->update();
         gameCtrlSystem->update();
         renderGunSystem->update();
+        soundSystem->update();
 
 
         SDL_RenderPresent(game->getRenderer());
@@ -66,4 +68,5 @@ void Asteroids::initGame()
     bulletSystem = mngr->addSystem<BulletSystem>();
     collisionSystem = mngr->addSystem<CollisionSystem>();
     gameCtrlSystem = mngr->addSystem<GameCtrlSystem>();
+    soundSystem = mngr->addSystem<SoundSystem>();
 }

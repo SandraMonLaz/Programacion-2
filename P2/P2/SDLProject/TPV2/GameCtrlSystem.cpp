@@ -59,3 +59,5 @@ void GameCtrlSystem::onAsteroidExtenction()
 
 	e->getComponent<GameState>(ecs::GameState)->currentState_ = GameState::terminado;
 }
+
+

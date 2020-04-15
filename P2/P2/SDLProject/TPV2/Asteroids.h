@@ -12,6 +12,7 @@
 #include "SDLGame.h"
 #include "BulletPool.h"
 #include "AsteroidPool.h"
+#include "SoundSystem.h"
 
 class Asteroids
 {
@@ -37,7 +38,8 @@ private:
     BulletSystem* bulletSystem;
     CollisionSystem* collisionSystem;
     GameCtrlSystem* gameCtrlSystem;
-
+	SoundSystem* soundSystem;
+    
     const static int _WINDOWWIDTH = 640;
     const static int _WINDOWHEIGHT = 480;
 };

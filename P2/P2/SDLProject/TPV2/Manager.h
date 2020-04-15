@@ -85,6 +85,9 @@ public:
 			s->recieve(msg);
 		}
 	}
+	void send(ecs::SysIdType sys, const msg::Message& msg) {
+		systems_[sys]->recieve(msg);
+	}
 
 private:
 	SDLGame *game_;

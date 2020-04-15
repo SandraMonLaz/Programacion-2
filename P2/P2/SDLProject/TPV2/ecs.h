@@ -47,7 +47,8 @@ enum SysId : SysIdType {
 	_sys_Fighter, // sistema del caza (para gestionar el movimiento del caza)
 	_sys_FighterGun, // sistema del arma (para disparar -- arma para el caza)
 	_sys_Collisions, // sistema de colisiones (para comprobar todas las colisiones)
-	_sys_Render,
+	_sys_Render,	//sistema de renderizado
+	_sys_Sound,		//sistema de sonido
 	//
 	// don't touch the rest of this enum, it is to identify the max
 	// number of systems

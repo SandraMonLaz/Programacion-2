@@ -39,8 +39,6 @@ void AsteroidSystem::addAsteroids(int n)
 
 void AsteroidSystem::onCollisionWithBullet(Entity* a)
 {
-	a->setActive(false);
-	numOfAsteroids_--;
 	cout << numOfAsteroids_ << endl;
 	mngr_->getHandler(ecs::_hdlr_GameState)->getComponent<Score>(ecs::Score)->addPoints();
 	if (a->getComponent<AsteroidLifetime>(ecs::AsteroidLifetime)->gen_ > 0) {
@@ -59,6 +57,8 @@ void AsteroidSystem::onCollisionWithBullet(Entity* a)
 			}
 		}
 	}
+	a->setActive(false);
+	numOfAsteroids_--;
 	if (numOfAsteroids_ <= 0) mngr_->getSystem<GameCtrlSystem>(ecs::_sys_GameCtrl)->onAsteroidExtenction();
 
 }
