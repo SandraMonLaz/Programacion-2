@@ -2,6 +2,7 @@
 #include "GameState.h"
 #include "GameCtrlSystem.h"
 
+
 void FighterSystem::onCollisionWithAsteroid(Entity* a)
 {
 	Transform* m = a->getComponent<Transform>(ecs::Transform);
@@ -9,7 +10,6 @@ void FighterSystem::onCollisionWithAsteroid(Entity* a)
 	m->position_.set(Vector2D(game_->getWindowWidth() / 2, game_->getWindowHeight() / 2));
 	m->velocity_.set(Vector2D(0, 0));
 	m->rotation_ = 0;
-
 
 	if (health->health_ > 0 && health->hasDied()) mngr_->getSystem<GameCtrlSystem>(ecs::_sys_GameCtrl)->onFighterDead(GameState::noTerminado);
 	else mngr_->getSystem<GameCtrlSystem>(ecs::_sys_GameCtrl)->onFighterDead(GameState::parado);
@@ -64,5 +64,18 @@ void FighterSystem::update()
 		else {
 			tr_->position_.set(tr_->position_ + tr_->velocity_ * drag_);							//Sino se mueve
 		}
+	}
+}
+
+void FighterSystem::recieve(const msg::Message& msg)
+{
+	switch (msg.id)
+	{
+	case msg::FIGHTER_COLLISION: {
+		onCollisionWithAsteroid(static_cast<const msg::FighterCollisionMsg&>(msg).a);		
+		break;
+	}
+	default:
+		break;
 	}
 }

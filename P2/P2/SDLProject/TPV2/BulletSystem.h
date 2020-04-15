@@ -7,10 +7,10 @@ public:
 	BulletSystem() : System(ecs::_sys_Bullets) {}
 	~BulletSystem() {}
 
-	void shoot(Vector2D pos, Vector2D vel, double width, double height);
-	void onCollisionWithAsteroid(Entity* b, Entity* a);
-		
 	void update() override;
+	void recieve(const msg::Message& msg) override;
+private:
+	void onCollisionWithAsteroid(Entity* b);
 
 };
 

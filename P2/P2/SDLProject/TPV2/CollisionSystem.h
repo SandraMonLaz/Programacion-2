@@ -24,7 +24,8 @@ public:
 				Transform* trF = fighter->getComponent<Transform>(ecs::Transform);
 				//Miramos si colisiona con el player
 				if (Collisions::collidesWithRotation(trA->position_, trA->width_, trA->height_, trA->rotation_, trF->position_, trF->width_, trF->height_, trF->rotation_)) {
-					mngr_->getSystem<FighterSystem>(ecs::_sys_Fighter)->onCollisionWithAsteroid(fighter);
+					msg::FighterCollisionMsg msg(fighter);
+					mngr_->send(msg);
 					break;
 				}
 				//Miramos si colisiona con alguna de las balas
@@ -33,8 +34,8 @@ public:
 					if (!b->isActive()) continue;
 					if (!a->isActive()) break;
 					if (Collisions::collidesWithRotation(trA->position_, trA->width_, trA->height_, trA->rotation_, trB->position_, trB->width_, trB->height_, trB->rotation_)) {
-						mngr_->getSystem<BulletSystem>(ecs::_sys_Bullets)->onCollisionWithAsteroid(b, a);
-						mngr_->getSystem<AsteroidSystem>(ecs::_sys_Asteroids)->onCollisionWithBullet(a, b);
+						msg::AsteroidBulletCollisionMsg msg(a,b);
+						mngr_->send(msg);
 					}
 				}
 			}

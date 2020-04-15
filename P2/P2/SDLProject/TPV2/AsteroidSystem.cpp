@@ -37,7 +37,7 @@ void AsteroidSystem::addAsteroids(int n)
 	}
 }
 
-void AsteroidSystem::onCollisionWithBullet(Entity* a, Entity* b)
+void AsteroidSystem::onCollisionWithBullet(Entity* a)
 {
 	a->setActive(false);
 	numOfAsteroids_--;
@@ -83,6 +83,23 @@ void AsteroidSystem::update()
 					tr->position_.setY(game_->getWindowHeight());
 			}
 		}
+	}
+}
+
+void AsteroidSystem::recieve(const msg::Message& msg)
+{
+	switch (msg.id)
+	{
+	case msg::ASTEROID_BULLET_COLLISION: {
+		onCollisionWithBullet(static_cast<const msg::AsteroidBulletCollisionMsg&>(msg).a);
+		break;
+	}
+	case msg::ADD_ASTEROID_MSG: {
+		addAsteroids(static_cast<const msg::AddAsteroidMsg&>(msg).n_);
+		break;
+	}
+	default:
+		break;
 	}
 }
 

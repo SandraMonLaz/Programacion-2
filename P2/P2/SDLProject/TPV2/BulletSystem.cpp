@@ -4,17 +4,7 @@
 #include "GameState.h"
 
 
-//Crea una nueva bala dada la posicion y la velocidad a la que ha de ir
-void BulletSystem::shoot(Vector2D pos, Vector2D vel, double width, double height)
-{
-	Entity* e = mngr_->addEntity<BulletPool>(pos, vel, width, height);
-	if (e != nullptr) {
-		e->setActive(true);
-		e->addToGroup(ecs::_grp_Bullet);
-	}
-}
-
-void BulletSystem::onCollisionWithAsteroid(Entity* b, Entity* a)
+void BulletSystem::onCollisionWithAsteroid(Entity* b)
 {
 	b->setActive(false);
 }
@@ -34,5 +24,28 @@ void BulletSystem::update()
 			}
 		}
 	}
-
 }
+
+void BulletSystem::recieve(const msg::Message& msg)
+{
+	switch (msg.id)
+	{
+	case msg::ASTEROID_BULLET_COLLISION: {
+		onCollisionWithAsteroid(static_cast<const msg::AsteroidBulletCollisionMsg&>(msg).b);
+		break;
+	}
+	case msg::SHOOT_MSG: {
+		//Crea una nueva bala dada la posicion y la velocidad a la que ha de ir
+		auto& shoot = static_cast<const msg::ShootMsg&>(msg);
+		Entity* e = mngr_->addEntity<BulletPool>(shoot.pos_, shoot.vel_, shoot.width_, shoot.height_);
+		if (e != nullptr) {
+			e->setActive(true);
+			e->addToGroup(ecs::_grp_Bullet);
+		}
+		break;
+	}
+	default:
+		break;
+	}
+}
+

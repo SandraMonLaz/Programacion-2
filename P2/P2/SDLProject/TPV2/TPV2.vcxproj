@@ -90,6 +90,7 @@
     <ClInclude Include="InputHandler.h" />
     <ClInclude Include="jute.h" />
     <ClInclude Include="Manager.h" />
+    <ClInclude Include="messages.h" />
     <ClInclude Include="ObjectFactory.h" />
     <ClInclude Include="ObjectPool.h" />
     <ClInclude Include="OFFacotry.h" />

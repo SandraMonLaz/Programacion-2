@@ -79,6 +79,12 @@ public:
 
 	// refresh lists of enteties (remove not active and modify groups)
 	void refresh();
+	//messaging
+	void send(const msg::Message& msg) {
+		for (auto& s : systems_) {
+			s->recieve(msg);
+		}
+	}
 
 private:
 	SDLGame *game_;
