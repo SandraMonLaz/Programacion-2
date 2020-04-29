@@ -23,9 +23,7 @@ void GameCtrlSystem::update() {
 				mngr_->getHandler(ecs::_hdlr_Fighter)->getComponent<Health>(ecs::Health)->health_ = 3;
 				e->getComponent<Score>(ecs::Score)->points_ = 0;
 			}
-
-			msg::AddAsteroidMsg msg(5);
-			mngr_->send(msg);
+			mngr_->getSystem<AsteroidSystem>(ecs::_sys_Asteroids)->addAsteroids(5);
 			e->getComponent<GameState>(ecs::GameState)->currentState_ = GameState::noParado;
 	}
 }

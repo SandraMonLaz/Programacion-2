@@ -276,11 +276,14 @@
     <ClInclude Include="Asteroids.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="messages.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SoundSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+=======
+>>>>>>> parent of eded987... mENSAJES(NO TODOS
   </ItemGroup>
 </Project>

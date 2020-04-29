@@ -42,6 +42,8 @@ enum HdlrId : HdlrIdType {
 
 enum SysId : SysIdType {
 	_sys_GameCtrl,
+	_sys_PackMan,
+	_sys_Stars,
 	_sys_Asteroids, // sistema de los asteroids (para mover los asteroides)
 	_sys_Bullets, // sistema de las balas (para mover las balas)
 	_sys_Fighter, // sistema del caza (para gestionar el movimiento del caza)
