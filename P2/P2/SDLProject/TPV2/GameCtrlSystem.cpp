@@ -17,7 +17,7 @@ void GameCtrlSystem::update() {
 	if ((e->getComponent<GameState>(ecs::GameState)->currentState_ == GameState::parado ||
 		 e->getComponent<GameState>(ecs::GameState)->currentState_ == GameState::noTerminado ||
 		 e->getComponent<GameState>(ecs::GameState)->currentState_ == GameState::terminado) &&
-		 InputHandler::instance()->isKeyDown(SDLK_p)) {
+		 InputHandler::instance()->isKeyDown(SDLK_RETURN)) {
 		
 			if (e->getComponent<GameState>(ecs::GameState)->currentState_ != GameState::parado) {
 				mngr_->getHandler(ecs::_hdlr_Fighter)->getComponent<Health>(ecs::Health)->health_ = 3;

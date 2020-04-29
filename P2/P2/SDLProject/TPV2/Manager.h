@@ -79,18 +79,7 @@ public:
 
 	// refresh lists of enteties (remove not active and modify groups)
 	void refresh();
-<<<<<<< HEAD
-	//messaging
-	void send(const msg::Message& msg) {
-		for (auto& s : systems_) {
-			s->recieve(msg);
-		}
-	}
-	void send(ecs::SysIdType sys, const msg::Message& msg) {
-		systems_[sys]->recieve(msg);
-	}
-=======
->>>>>>> parent of eded987... mENSAJES(NO TODOS
+
 
 private:
 	SDLGame *game_;

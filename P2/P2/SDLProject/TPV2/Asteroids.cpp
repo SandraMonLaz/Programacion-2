@@ -8,8 +8,7 @@ Asteroids::Asteroids():
         renderGunSystem(nullptr),
         bulletSystem(nullptr),
         collisionSystem(nullptr),
-        gameCtrlSystem(nullptr),
-		soundSystem(nullptr){
+        gameCtrlSystem(nullptr){
     initGame();
 }
 
@@ -40,7 +39,6 @@ void Asteroids::start()
         collisionSystem->update();
         gameCtrlSystem->update();
         renderGunSystem->update();
-        soundSystem->update();
 
 
         SDL_RenderPresent(game->getRenderer());
@@ -61,6 +59,12 @@ void Asteroids::initGame()
     BulletPool::init(20);
     AsteroidPool::init(20);
     mngr = new Manager(game);
+
+	game->getAudioMngr()->setChannelVolume(3, 0);
+	game->getAudioMngr()->setChannelVolume(3, 1);
+	game->getAudioMngr()->setMusicVolume(13);
+	game->getAudioMngr()->playMusic(Resources::ImperialMarch);
+
     fighterSystem = mngr->addSystem<FighterSystem>();
     fighterGunSystem = mngr->addSystem<FighterGunSystem>();
     asteroidsSystem = mngr->addSystem<AsteroidSystem>();
@@ -68,5 +72,4 @@ void Asteroids::initGame()
     bulletSystem = mngr->addSystem<BulletSystem>();
     collisionSystem = mngr->addSystem<CollisionSystem>();
     gameCtrlSystem = mngr->addSystem<GameCtrlSystem>();
-    soundSystem = mngr->addSystem<SoundSystem>();
 }

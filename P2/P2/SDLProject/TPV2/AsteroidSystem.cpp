@@ -19,6 +19,7 @@ void AsteroidSystem::calculatePos(int i, double& x, double& y)
 
 void AsteroidSystem::addAsteroids(int n)
 {
+	numOfAsteroids_ = 0; //Reseteamos los asteroides
 	for (int i = 0; i < n; ++i) {
 		RandomNumberGenerator* r = game_->getRandGen();
 		double pX = 0, pY = 0;
@@ -39,7 +40,7 @@ void AsteroidSystem::addAsteroids(int n)
 
 void AsteroidSystem::onCollisionWithBullet(Entity* a, Entity* b)
 {
-	cout << numOfAsteroids_ << endl;
+	game_->getAudioMngr()->playChannel(Resources::Explosion, 0, 1);
 	mngr_->getHandler(ecs::_hdlr_GameState)->getComponent<Score>(ecs::Score)->addPoints();
 	if (a->getComponent<AsteroidLifetime>(ecs::AsteroidLifetime)->gen_ > 0) {
 		for (int i = 0; i < 2; ++i) {
@@ -59,6 +60,7 @@ void AsteroidSystem::onCollisionWithBullet(Entity* a, Entity* b)
 	}
 	a->setActive(false);
 	numOfAsteroids_--;
+	cout << numOfAsteroids_ << endl;
 	if (numOfAsteroids_ <= 0) mngr_->getSystem<GameCtrlSystem>(ecs::_sys_GameCtrl)->onAsteroidExtenction();
 
 }
