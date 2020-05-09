@@ -22,7 +22,7 @@ vector<Resources::TextMsgInfo> Resources::messages_ {
 		{ WaitingForPlayer, "Waiting for other player", { COLOR(0xaaccbbff) }, ARIAL24 }, //
 		{ Lose, "YOU LOST", { COLOR(0xaaccbbff) }, ARIAL24 }, //
 		{ Winner, "YOU WIN", { COLOR(0xaaccbbff) }, ARIAL24 }, //
-		{ Draw, "DRAW", { COLOR(0xaaccbbff) }, ARIAL24 } //
+		{ Draw, "DRAW", { COLOR(0xaaccbbff) }, ARIAL24 }, //
 
 };
 

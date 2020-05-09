@@ -19,7 +19,7 @@ GameCtrlSystem::GameCtrlSystem() :
 void GameCtrlSystem::init() {
 	state_ = WAITING;
 
-	mngr_->send<msg::Message>(msg::_PLAYER_INFO);
+	mngr_->send<msg::PlayerInfo>(mngr_->getName());
 }
 
 void GameCtrlSystem::update() {
@@ -39,7 +39,10 @@ void GameCtrlSystem::recieve(const msg::Message& msg)
 	case msg::_PLAYER_INFO: {
 		if (state_ == READY || msg.senderClientId == mngr_->getClientId()) return;
 		state_ = READY;
-		mngr_->send<msg::Message>(msg::_PLAYER_INFO);
+		char n[11];
+		strcpy_s(n, static_cast<const msg::PlayerInfo&>(msg).name);
+		mngr_->setOpponentName(n);
+		mngr_->send<msg::PlayerInfo>(mngr_->getName());
 		break;
 	}
 	case msg::_CLIENT_DISCONNECTED:

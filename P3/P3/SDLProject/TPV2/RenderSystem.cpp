@@ -22,6 +22,7 @@ void RenderSystem::update() {
 	for (auto &e : mngr_->getGroupEntities(ecs::_grp_Bullets))
 		drawImage(e); // auto cast from unique_ptr to Entity*
 
+	drawNames();
 	drawCtrlMessages();
 	drawScore();
 }
@@ -34,6 +35,27 @@ void RenderSystem::drawImage(Entity *e) {
 	RECT(tr->position_.getX(), tr->position_.getY(), tr->width_,
 			tr->height_);
 	tex->render(dest, tr->rotation_);
+}
+
+void RenderSystem::drawNames() {
+	Texture name;
+	Texture opponentName;
+	SDL_Rect rectName = RECT(0, 0, 100, 25);
+	SDL_Rect rectOpponentName = RECT(SDLGame::instance()->getWindowWidth() - 200, 0, 100, 25);
+
+	name.loadFromText(SDLGame::instance()->getRenderer(), mngr_->getName(), SDLGame::instance()->getFontMngr()->getFont(Resources::ARIAL24), SDL_Color({0, 0, 0, 255}));
+	opponentName.loadFromText(SDLGame::instance()->getRenderer(), mngr_->getOpponentName(), SDLGame::instance()->getFontMngr()->getFont(Resources::ARIAL24), SDL_Color({0, 0, 0, 255}));
+
+	if (mngr_->getClientId() == 0) {
+		SDLGame::instance()->getTextureMngr()->getTexture(Resources::WhiteRect)->render(rectName);
+		name.render(rectName);
+		opponentName.render(rectOpponentName);
+	}
+	else {
+		SDLGame::instance()->getTextureMngr()->getTexture(Resources::WhiteRect)->render(rectOpponentName);
+		name.render(rectOpponentName);
+		opponentName.render(rectName);
+	}
 }
 
 void RenderSystem::drawCtrlMessages() {

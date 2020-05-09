@@ -48,6 +48,11 @@ struct ClientDisconnectedMsg: Message {
 	uint32_t clientId;
 };
 
+struct PlayerInfo : Message {
+	PlayerInfo(const char* n) : Message(sizeof(PlayerInfo), _PLAYER_INFO) { strcpy_s(name, n); }
+	char name[11];
+};
+
 struct FighterInfoMessage : Message {
 	FighterInfoMessage(double x, double y, double rot) : Message(sizeof(FighterInfoMessage), _FIGHTER_INFO), x(x), y (y), rotation(rot) {}
 	double x;
