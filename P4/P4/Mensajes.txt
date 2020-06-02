@@ -1,0 +1,4 @@
+BulletSystem->Update(); posicion de las balas
+FighterSystem->updateFighter(); posicion y rotacion del player y disparo // cambio de teclas en init()
+CollisionSystem->roundOver(disable all, onFighterDead)
+GameCtrlSystem->startGame(); ResetScore, OnfFighterDead
